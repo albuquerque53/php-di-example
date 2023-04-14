@@ -31,7 +31,7 @@ readonly class Container implements \Psr\Container\ContainerInterface
         $instance = $this->instances[$class];
 
         try {
-            return $instance();
+            return $instance($this);
         } catch (\Throwable $throwable) {
             throw new ContainerException($throwable->getMessage(), 500);
         }
