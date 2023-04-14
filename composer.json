@@ -1,0 +1,21 @@
+{
+    "name": "albuquerque53/di-php",
+    "description": "Simple example about dependency injection",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Albuca\\DiPhp\\": "internal/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Albuquerque",
+            "email": "gabrielalbuquerque-dev@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "psr/container": "^2.0"
+    }
+}
