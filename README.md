@@ -23,12 +23,12 @@ In this project I'm working with some concepts and patterns such as...
 
 1. Install the dependencies:
 ```
-composer install
+make install
 ```
 
 2. Run the application:
 ```
-php index.php
+make run
 ```
 
 
