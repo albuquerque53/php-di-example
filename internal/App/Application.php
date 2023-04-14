@@ -2,12 +2,12 @@
 
 namespace Albuca\DiPhp\App;
 
-use Albuca\DiPhp\App\Di\Container;
 use Albuca\DiPhp\Domain\User;
+use Psr\Container\ContainerInterface;
 
 readonly class Application
 {
-    public function __construct(private Container $container)
+    public function __construct(private ContainerInterface $container)
     {
         //
     }
@@ -17,8 +17,8 @@ readonly class Application
      *
      * @return void
      *
-     * @throws Exception\ContainerException
-     * @throws Exception\NotFoundException
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
      */
     public function run(): void
     {
