@@ -2,9 +2,9 @@
 
 namespace Albuca\DiPhp\Domain;
 
-readonly class User
+class User
 {
-    public function __construct(private RepositoryInterface $repository)
+    public function __construct(private readonly RepositoryInterface $repository)
     {
         //
     }
