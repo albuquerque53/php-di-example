@@ -26,7 +26,12 @@ In this project I'm working with some concepts and patterns such as...
 make install
 ```
 
-2. Run the application:
+2. Run all the tests to make sure that everything's ok:
+```
+make test 
+```
+
+3. Finally, run the application:
 ```
 make run
 ```
