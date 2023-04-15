@@ -12,11 +12,11 @@ class ContainerUTest extends \PHPUnit\Framework\TestCase
 
     public function testGetSuccess(): void
     {
-        $expectedObject = 'successObject';
+        $expectedObject = new \stdClass();
 
         $this->instances = [
             'successClass' => function () {
-                return 'successObject';
+                return new \stdClass();
             }
         ];
 
@@ -35,7 +35,7 @@ class ContainerUTest extends \PHPUnit\Framework\TestCase
         $container = $this->createInstance();
 
         $this->expectException(NotFoundException::class);
-        $this->expectExceptionMessage('Could not find the definition for notExistingClass');
+        $this->expectExceptionMessage('Could not resolve definitions for notExistingClass');
 
         $container->get('notExistingClass');
     }
