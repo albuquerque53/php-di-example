@@ -73,7 +73,7 @@ readonly class Container implements \Psr\Container\ContainerInterface
      *
      * @param string $class
      * @return object
-     * @throws ContainerException
+     * @throws ContainerException|NotFoundException
      * @throws \ReflectionException
      */
     private function tryToResolveWithoutDefinition(string $class): object
